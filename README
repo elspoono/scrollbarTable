@@ -1,0 +1,14 @@
+/*
+ * jQuery scrollbarTable - v0.1 - 5/6/2011
+ * Derek Bredensteiner
+ * Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+ 
+ Very simple jQuery Plugin.  Usage is as follows.
+ 
+ $(document).ready(function(){
+	$('table.scrollable').scrollbarTable(300); /* Any table with a class of "scrollable" will be turned into a 300 pixel height scrolling table */
+});
+
+For more information, see http://elspoono.wordpress.com/2011/05/07/making-tables-scroll/
