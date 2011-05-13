@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+	<head>
+    	<title>scrollbarTable-0.1 Demo</title>
+        <style type="text/css">
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+}
+p {
+	margin: 20px 0;
+}
+th{
+	font-weight: bold;
+}
+td,th{
+	border: 1px solid #999;
+	padding: 3px;
+}
+#column-one{
+	width: 950px;
+	margin: 0 auto;
+}
+		</style>
+    </head>
+    <body>
+    	<div id="column-one">
+            <h1>scrollbarTable Demo</h1>
+            <p>This is a table with nothing done to it:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column One</th>
+                        <th>Column Two</th>
+                        <th>Column Three</th>
+                        <th>Column Four</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>And this is the same table with .scrollbarTable() called on it:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column One</th>
+                        <th>Column Two</th>
+                        <th>Column Three</th>
+                        <th>Column Four</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data (and some additional text to demonstrate fluid layout)</td>
+                    </tr>
+                </tbody>
+            </table>
+		</div>
+    	<script src="jquery-1.6.1.min.js"></script>
+    	<script src="scrollbarTable-0.1.js"></script>
+        <script>
+			(function($){
+			  $('table:eq(1)').scrollbarTable();
+			})(jQuery);
+		</script>
+    </body>
+</html>
