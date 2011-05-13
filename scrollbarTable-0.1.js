@@ -1,5 +1,5 @@
 /*
- * jQuery scrollbarTable - v0.1 - 5/6/2011
+ * jQuery scrollbarTable - v0.1 - 5/13/2011
  * Derek Bredensteiner
  * Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
  */
@@ -7,8 +7,8 @@
 	$.fn.scrollbarTable = function(i){
 		var o = {};
 		if(typeof(i)=='number')o.height=i;
-		else if(typeof(o)=='object') o = i;
-		else if(typeof(o)=='undefined') o = 
+		else if(typeof(i)=='object') o = i;
+		else if(typeof(i)=='undefined') o = 
 			{
 				height: 300
 			}
